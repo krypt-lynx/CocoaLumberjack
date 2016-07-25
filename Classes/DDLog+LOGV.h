@@ -31,7 +31,7 @@
  * Whether async should be used by log messages, excluding error messages that are always sent sync.
  **/
 #ifndef LOG_ASYNC_ENABLED
-    #define LOG_ASYNC_ENABLED YES
+    #define LOG_ASYNC_ENABLED NO
 #endif
 
 /**

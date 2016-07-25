@@ -31,7 +31,7 @@
  * Whether async should be used by log messages, excluding error messages that are always sent sync.
  **/
 #ifndef LOG_ASYNC_ENABLED
-    #define LOG_ASYNC_ENABLED YES
+    #define LOG_ASYNC_ENABLED NO
 #endif
 
 /**
@@ -47,7 +47,7 @@
           function : fnct                                               \
               line : __LINE__                                           \
                tag : atag                                               \
-            format : (frmt), ## __VA_ARGS__]
+            format : frmt, ## __VA_ARGS__]
 
 #define LOG_MACRO_TO_DDLOG(ddlog, isAsynchronous, lvl, flg, ctx, atag, fnct, frmt, ...) \
         [ddlog log : isAsynchronous                                     \

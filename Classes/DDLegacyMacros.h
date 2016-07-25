@@ -41,7 +41,7 @@ Disable legacy macros by importing CocoaLumberjack.h or DDLogMacros.h instead of
 #define LOG_LEVEL_VERBOSE DDLogLevelVerbose
 #define LOG_LEVEL_ALL     DDLogLevelAll
 
-#define LOG_ASYNC_ENABLED YES
+#define LOG_ASYNC_ENABLED NO
 
 #define LOG_ASYNC_ERROR    ( NO && LOG_ASYNC_ENABLED)
 #define LOG_ASYNC_WARN     (YES && LOG_ASYNC_ENABLED)
@@ -58,7 +58,7 @@ Disable legacy macros by importing CocoaLumberjack.h or DDLogMacros.h instead of
           function : fnct                                               \
               line : __LINE__                                           \
                tag : atag                                               \
-            format : (frmt), ## __VA_ARGS__]
+            format : frmt, ## __VA_ARGS__]
 
 #define LOG_MAYBE(async, lvl, flg, ctx, fnct, frmt, ...)                       \
         do { if(lvl & flg) LOG_MACRO(async, lvl, flg, ctx, nil, fnct, frmt, ##__VA_ARGS__); } while(0)
